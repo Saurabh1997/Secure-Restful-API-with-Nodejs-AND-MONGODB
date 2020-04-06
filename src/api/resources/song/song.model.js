@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
-const { Schema } = mongoose;
+import mongoosepaginate from "mongoose-paginate";
+const { Schema } = mongoose; // schema from mongoose
 const songSchema = new Schema({
   title: {
     type: String,
@@ -17,4 +18,5 @@ const songSchema = new Schema({
   }
 });
 
-export default mongoose.model("Song", songSchema);
+songSchema.plugin(mongoosepaginate); //plugging in mongoose-paginate into schema of song
+export default mongoose.model("Song", songSchema); //defines a model
