@@ -20,4 +20,4 @@ npm start
 
 ### Hosted on
 
-[a link] https://blooming-peak-13429.herokuapp.com/
+https://blooming-peak-13429.herokuapp.com/

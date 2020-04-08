@@ -19,7 +19,7 @@ app.use("/api", restRouter);
 app.use(passport.initialize()); // method will create prop into req obj
 configJWTStrategy();
 app.use(
-  "/api-docs",
+  "/",
   swaggerUi.serve,
   swaggerUi.setup(swaggerDocument, { explorer: true })
 );

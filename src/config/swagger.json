@@ -2,6 +2,7 @@
   "swagger": "2.0",
   "title": "Music API Documentation",
   "Description": "Music API for MongodB",
+  "host": " https://blooming-peak-13429.herokuapp.com/",
   "basePath": "/api",
   "tags": [
     {
@@ -17,7 +18,7 @@
       "description": "API for Playlists Endpoints"
     }
   ],
-  "schemes": ["http"],
+  "schemes": ["http", "https"],
   "consumes": ["application/json"],
   "produces": ["application/json"],
   "paths": {
