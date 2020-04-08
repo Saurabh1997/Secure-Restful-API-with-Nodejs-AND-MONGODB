@@ -11,7 +11,9 @@ import { configJWTStrategy } from "./api/middlewares/passport-jwt";
 import { getConfig } from "./config/config";
 const app = express();
 const PORT = process.env.PORT || 3000;
-app.use(logger("dev"));
+if (process.env.NODE_ENV === "development") {
+  app.use(logger("dev"));
+}
 connect(); //method to connect mongodb
 app.use(express.json()); //to parse json  - part of bodyparser
 app.use(express.urlencoded({ extended: true })); //to parse url
