@@ -15,3 +15,9 @@ mongod
 ```shell
 npm start
 ```
+
+## Already deployed on heroku
+
+### Hosted on
+
+[a link] https://blooming-peak-13429.herokuapp.com/
