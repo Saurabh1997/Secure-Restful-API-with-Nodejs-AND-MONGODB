@@ -5,4 +5,4 @@ const config = getConfig(process.env.NODE_ENV); //will get node env from running
 //mongoose.Promise = global.Promise
 export const connect = () =>
   // mongoose.connect("mongodb://localhost/music_api", { useNewUrlParser: true });
-  mongoose.connect(config.MONGO_URI, { useNewUrlParser: true });
+  mongoose.connect(config.MONGO_URI, { useUnifiedTopology: true });
