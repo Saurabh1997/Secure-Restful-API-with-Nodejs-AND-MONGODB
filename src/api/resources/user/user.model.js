@@ -1,4 +1,6 @@
 import mongoose from "mongoose";
+export const STANDARD_ROLE = 2; // cannot create,delete  and update song
+export const ARTIST_ROLE = 1; // can do anything
 const { Schema } = mongoose; // schema from mongoose
 const userSchema = new Schema({
   firstName: {
@@ -17,6 +19,11 @@ const userSchema = new Schema({
   password: {
     type: String,
     required: true,
+  },
+  role: {
+    default: 2,
+    required: true,
+    type: Number,
   },
 });
 

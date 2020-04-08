@@ -1,6 +1,12 @@
 import express from "express";
 import userController from "./user.controller";
-
+import passport from "passport";
 export const userRouter = express.Router();
 
-userRouter.route("/signup").post(userController.signup);
+userRouter.post("/signup", userController.signup);
+userRouter.post("/login", userController.login);
+userRouter.get(
+  "/me",
+  passport.authenticate("jwt", { session: false }), //authenticate will call the config strategy
+  userController.authenticate
+); //for testing

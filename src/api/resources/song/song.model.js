@@ -4,18 +4,23 @@ const { Schema } = mongoose; // schema from mongoose
 const songSchema = new Schema({
   title: {
     type: String,
-    required: [true, "Song must have title"]
+    required: [true, "Song must have title"],
   },
   url: {
     type: String,
-    required: [true, "Song must have URL"]
+    required: [true, "Song must have URL"],
   },
   rating: {
     type: Number,
     default: 0,
     min: 0,
-    max: 5
-  }
+    max: 5,
+  },
+  artist: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
+  },
 });
 
 songSchema.plugin(mongoosepaginate); //plugging in mongoose-paginate into schema of song
